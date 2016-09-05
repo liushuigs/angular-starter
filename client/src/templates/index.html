@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="stylesheets/app.css">
+  <title>angular-starter</title>
+</head>
+<body ng-app="app" ng-controller="TopCtrl as tc">
+<div id="container" ng-if="tc.inited">
+  <div class="m-header">
+    common header:
+    <div>current user: {{tc.user.userName}}(id: {{tc.user.userId}})</div>
+  </div>
+  <div ui-view></div>
+  <div class="m-footer">
+    common footer
+  </div>
+</div>
+<script src="javascripts/shared.js"></script>
+<script src="javascripts/index.js"></script>
+</body>
+</html>

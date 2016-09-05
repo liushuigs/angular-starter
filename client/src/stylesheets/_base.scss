@@ -1,0 +1,103 @@
+@import "./z-index";
+@import "./colors";
+
+body {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  font-family: Microsoft Yahei,Helvetica, Arial, sans-serif;
+  position: relative;
+  z-index: $body-index;
+  background-color: #f0f3f5;
+}
+
+h1, h4, h5, h6, p, ul, li {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-size: inherit;
+}
+h2,
+h3 {
+  orphans: 3;
+  widows: 3;
+}
+h2,
+h3 {
+  page-break-after: avoid;
+}
+h2,
+h3 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+
+header, section, footer, nav {
+  display: block;
+}
+
+img {
+  border: none
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: $baby-blue-color;
+}
+blockquote {
+  page-break-inside: avoid;
+}
+blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 17.5px;
+  border-left: 5px solid #eee;
+}
+ul {
+  list-style: none
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  height: 0;
+  display: block;
+  zoom: 1
+}
+
+* html .clearfix {
+  height: 1%;
+}
+
+* {
+  box-sizing: border-box
+}
+
+.table {
+  border-spacing: 0;
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+}
+
+.btn {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #5b5b5b;
+  font-size: 14px;
+  cursor: pointer;
+  &.btn-primary{
+    cursor: pointer;
+    border: none;
+    padding: 5px 20px;
+    background-color: #01b0ec;
+    color: white;
+  }
+}

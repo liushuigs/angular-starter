@@ -1,0 +1,15 @@
+/* FONT PATH
+ * -------------------------- */
+
+@font-face {
+  font-family: 'Black Tie';
+  src: url('#{$bt-font-path}/BlackTie-Regular-webfont.eot?v=#{$bt-version}');
+  src: url('#{$bt-font-path}/BlackTie-Regular-webfont.eot?#iefix&v=#{$bt-version}') format('embedded-opentype'),
+  url('#{$bt-font-path}/BlackTie-Regular-webfont.woff2?v=#{$bt-version}') format('woff2'),
+  url('#{$bt-font-path}/BlackTie-Regular-webfont.woff?v=#{$bt-version}') format('woff'),
+  url('#{$bt-font-path}/BlackTie-Regular-webfont.ttf?v=#{$bt-version}') format('truetype'),
+  url('#{$bt-font-path}/BlackTie-Regular-webfont.svg?v=#{$bt-version}#black_tieregular') format('svg');
+  //  src: url('#{$bt-font-path}/BlackTie-Regular.otf') format('opentype'); // used when developing fonts
+  font-weight: 400;
+  font-style: normal;
+}

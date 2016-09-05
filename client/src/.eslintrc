@@ -1,0 +1,103 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+
+    // Since we use webpack, we have some commonjs syntax in our client-side code
+    "commonjs": true
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 6
+  },
+  "rules": {
+    // Don't enforce braces for arrow-body. The reason is that for code coverage to work,
+    // we need methods to always be multiple lines, so we don't want to enforce the "as-needed"
+    // rule.
+    // http://eslint.org/docs/rules/arrow-body-style
+    "arrow-body-style": [0, "as-needed"],
+    // Require parens in arrow function arguments
+    // http://eslint.org/docs/rules/arrow-parens
+    "arrow-parens": 0,
+    // Require space before/after arrow function"s arrow
+    // http://eslint.org/docs/rules/arrow-spacing
+    "arrow-spacing": [2, { "before": true, "after": true }],
+    // Verify super() callings in constructors
+    // http://eslint.org/docs/rules/constructor-super
+    "constructor-super": 0,
+    // Enforce the spacing around the * in generator functions
+    "generator-star-spacing": 0,
+    // Prevent re-assigning a variable bound to a class. So if I
+    // declare a class A, I can't later reassign A to another value,
+    // like with A = 2.
+    "no-class-assign": 2,
+    // Allow the use of arrow functions around these operators
+    // (<=, >=, etc.).
+    // http://eslint.org/docs/rules/no-confusing-arrow
+    "no-confusing-arrow": 0,
+    // Disallow modifying variables that are declared using const.
+    "no-const-assign": 2,
+    // Disallow symbol constructor. Symbols shouldn't be instantiated
+    // with `new`.
+    // http://eslint.org/docs/rules/no-new-symbol
+    "no-new-symbol": 2,
+    // Allow all imports. This rule lets you make eslint complain
+    // when you import certain modules.
+    // http://eslint.org/docs/rules/no-restricted-imports
+    "no-restricted-imports": 0,
+    // Disallow using this/super before super() calling in constructors.
+    // This would cause an error in transpilation anyway, so it's
+    // nice to know about it in advance.
+    // http://eslint.org/docs/rules/no-this-before-super
+    "no-this-before-super": 2,
+    // Require let or const instead of var.
+    // http://eslint.org/docs/rules/no-var
+    "no-var": 2,
+    // Disallow constructors that do nothing.
+    // http://eslint.org/docs/rules/no-useless-constructor
+    "no-useless-constructor": 2,
+    // Require method and property shorthand syntax for object literals.
+    // http://eslint.org/docs/rules/object-shorthand
+    "object-shorthand": [2, "always"],
+    // Force callbacks to be arrow functions. Arrow functions
+    // are useful as callbacks because their value of `this` is the
+    // parent scope rather than a new scope.
+    // http://eslint.org/docs/rules/prefer-arrow-callback
+    "prefer-arrow-callback": 1,
+    // Suggest using of const declaration for variables that are never modified after declared
+    // http://eslint.org/docs/rules/prefer-const
+    "prefer-const": 2,
+    // Force using the spread operator instead of .apply()
+    // http://eslint.org/docs/rules/prefer-spread
+    "prefer-spread": 2,
+    // Force using Reflect methods where applicable
+    // http://eslint.org/docs/rules/prefer-reflect
+    "prefer-reflect": 0,
+    // Use rest parameters instead of `arguments`
+    // `arguments` sucks. It's always better to use the spread arguments.
+    // http://eslint.org/docs/rules/prefer-rest-params
+    "prefer-rest-params": 2,
+    // suggest using template literals instead of string concatenation
+    // http://eslint.org/docs/rules/prefer-template
+    "prefer-template": 1,
+    // Disallow generator functions that do not have yield.
+    // Generator functions without `yield`s are pointless.
+    // http://eslint.org/docs/rules/require-yield
+    "require-yield": 2,
+    // Force import sorting.
+    // Having sorted imports makes it easier to find the
+    // import you're looking for.
+    // http://eslint.org/docs/rules/sort-imports
+    "sort-imports": 2,
+    // Enforce no spaces in the `${value}` of template strings.
+    // So there are no values like '`${ value}`'.
+    // http://eslint.org/docs/rules/template-curly-spacing
+    "template-curly-spacing": 2,
+    // Enforce spacing around the * in yield* expressions
+    // http://eslint.org/docs/rules/yield-star-spacing
+    "yield-star-spacing": [2, "after"],
+    // Make sure for-in loops have an if statement
+    // http://eslint.org/docs/rules/guard-for-in
+    "guard-for-in": 0
+  }
+}

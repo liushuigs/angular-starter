@@ -1,0 +1,4 @@
+// These settings are used by `babel` and `babel-node`
+{
+    "presets": ['es2015', 'stage-0']
+}

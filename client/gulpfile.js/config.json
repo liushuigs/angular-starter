@@ -1,0 +1,70 @@
+{
+  "root": {
+    "src": "./src",
+    "dest": "./public"
+  },
+
+  "tasks": {
+    "browserSync": {
+      "server": {
+        "baseDir": "public"
+      }
+    },
+
+    "static": {
+      "src": "static",
+      "dest": "./"
+    },
+
+    "js": {
+      "src": "javascripts",
+      "dest": "javascripts",
+      "extractSharedJs": true,
+      "entries": {
+        "index": ["./index.js"]
+      },
+      "extensions": ["js"]
+    },
+
+    "css": {
+      "src": "stylesheets",
+      "dest": "stylesheets",
+      "autoprefixer": {
+        "browsers": ["last 3 version"]
+      },
+      "sass": {
+        "indentedSyntax": false
+      },
+      "less": {},
+      "extensions": ["scss", "css"]
+    },
+
+    "fonts": {
+      "src": "fonts",
+      "dest": "fonts",
+      "extensions": ["woff2", "woff", "eot", "ttf", "svg"]
+    },
+
+    "html": {
+      "src": "templates",
+      "dest": "./",
+      "dataFile": "data/global.json",
+      "htmlmin": {
+        "collapseWhitespace": true
+      },
+      "extensions": ["html", "json"],
+      "excludeFolders": []
+    },
+
+    "images": {
+      "src": "images",
+      "dest": "images",
+      "extensions": ["jpg", "png", "svg", "gif"]
+    },
+    "schema": {
+      "src": "javascripts/schemas",
+      "dest": "./schema",
+      "extensions": ["json"]
+    }
+  }
+}
